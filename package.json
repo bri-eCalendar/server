@@ -1,0 +1,49 @@
+{
+  "name": "calendar-api",
+  "version": "1.0.0",
+  "description": "a server for my version of the eCalendar",
+  "main": "index.js",
+  "apidoc": {
+    "title": "Brianna Keune's eCalendar API Documentation",
+    "url": "https://bri-eCalendar.herokuapp.com/"
+  },
+  "scripts": {
+    "docs": "apidoc -i ./api/routes -e node_modules -o ./docs",
+    "server": "nodemon index.js",
+    "start": "node index.js",
+    "test": "cross-env DB_ENV=testing jest --watch --verbose --runInBand"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bri-eCalendar/server.git"
+  },
+  "keywords": [
+    "calendar"
+  ],
+  "author": "Brianna Keune",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bri-eCalendar/server/issues"
+  },
+  "homepage": "https://github.com/bri-eCalendar/server#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "jest": "^26.1.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "@okta/jwt-verifier": "^1.0.0",
+    "@okta/okta-sdk-nodejs": "^4.0.0",
+    "apidoc": "^0.23.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.23.3",
+    "pg": "^8.3.0"
+  }
+}
